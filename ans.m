@@ -1,6 +1,5 @@
-% Process the first set of images (long exposure)
+% (long exposure)
 img = double(imread('C:\Users\User\Desktop\lab\Lab2\lab2-long exposure\1.jpg'));
-[rows, cols, channels] = size(img);
 
 for i = 2:50
     filename = imread(['C:\Users\User\Desktop\lab\Lab2\lab2-long exposure\' num2str(i) '.jpg']);
@@ -10,9 +9,8 @@ end
 img = img / 50;  
 img = uint8(img);
 
-% Process the second set of images (noise averaging)
+% (noise averaging)
 img2 = double(imread('C:\Users\User\Desktop\lab\Lab2\lab2-noise averaging\puppy_1.jpg'));
-[rows, cols, channels] = size(img2);
 
 for i = 2:300
     filename = imread(['C:\Users\User\Desktop\lab\Lab2\lab2-noise averaging\puppy_' num2str(i) '.jpg']);
