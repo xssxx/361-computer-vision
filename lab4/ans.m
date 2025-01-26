@@ -1,7 +1,9 @@
-img = imread('dark_rays.jpg');
+A = imread('dark_rays.jpg'); 
+figure();
 
-B = imboxfilt(img, 3);   
-B = imgaussfilt(B, 2.5);
+subplot(1,2,1); imshow(A); title('Original Image');
 
-imshowpair(img, B, 'montage');
-title('Original Image (Left) | Unsharpened Image (Right)');
+B = imgaussfilt(A,3);
+C = imsharpen(B, 'Radius', 2, 'Amount', 50);
+subplot(1,2,2); imshow(C); 
+title('Enhanced and Sharpened');
