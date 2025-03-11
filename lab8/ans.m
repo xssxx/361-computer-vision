@@ -2,7 +2,7 @@ I_ref = imread('reference_sm.jpg');
 I_ref_gray = rgb2gray(I_ref);
 points_ref = detectSURFFeatures(I_ref_gray);
 [features_ref, validPoints_ref] = extractFeatures(I_ref_gray, points_ref);
-์
+
 imageFiles = dir("starbucks35_dataset\*.JPG");
 
 for i = 1:length(imageFiles)
